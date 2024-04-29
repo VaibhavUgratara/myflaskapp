@@ -1,7 +1,7 @@
 {
     "version":2,
     "builds": [{"src": "myapp.py", "use":"@vercel/python"}],
-    "routes":[{"src": "/(.*)", "dest": "myapp.py"}]
+    "routes":[{"src": "/(.*)", "dest": "myapp.py"}],
   "engines": {
     "node": "18.x"
   }
