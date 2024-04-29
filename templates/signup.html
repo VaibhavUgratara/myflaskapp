@@ -1,0 +1,25 @@
+{% extends 'navbar.html' %}
+{% block body %}
+<div class="container my-5">
+  <form action="/signup" method="POST">
+      <div class="mb-3">
+        <label for="nameofuser" class="form-label">Name</label>
+        <input class="form-control" id="nameofuser" name="username">
+      </div>
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="passwd">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if err_id==1 %}
+          <div class="alert alert-primary my-3" role="alert">
+            Email is already registered!!
+          </div>
+      {% endif %}
+</div>
+  {% endblock body %}

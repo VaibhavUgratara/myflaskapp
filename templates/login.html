@@ -1,0 +1,28 @@
+{% extends 'navbar.html' %}
+{% block body %}
+    <div class="card container my-5" style="width: 50vw;">
+        <div class="card-body">
+            <form action="/login" method="POST">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="passwd">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        {% if err_id==1 %}
+          <div class="alert alert-primary" role="alert">
+            Your email is not registerd!!
+          </div>
+        {% endif %}
+        {% if err_id==2 %}
+          <div class="alert alert-danger" role="alert">
+            Incorrect Password!!
+          </div>
+        {% endif %}
+    </div>
+{% endblock body %}
