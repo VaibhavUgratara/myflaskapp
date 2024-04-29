@@ -8,7 +8,7 @@ app.config['SQLAlCHEMY_TRACK_MODIFICATIONS']=False
 db=SQLAlchemy(app)
 
 
-app.config['SESSION_PERMANENT']=False
+app.config['SESSION_PERMANENT']=True
 app.config['SESSION_TYPE']="filesystem"
 Session(app)
 
